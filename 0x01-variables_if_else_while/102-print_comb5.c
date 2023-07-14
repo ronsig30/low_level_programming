@@ -6,24 +6,26 @@
  */
 int main(void)
 {
-	int firstDigit = 0;
+	int i, j;
 
-	while (firstDigit < 9)
+	for (i = 0; i < 100; i++)
 	{
-		int secondDigit = firstDigit + 1;
-
-		while (secondDigit < 10)
+		for (j = 0; j < 100; j++)
 		{
-			putchar(firstDigit + '0');
-			putchar(secondDigit + '0');
-			if (firstDigit != 8 || secondDigit != 9)
+			if (i < j)
 			{
-				putchar(',');
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
 				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-			secondDigit++;
 		}
-		firstDigit++;
 	}
 	putchar('\n');
 	return (0);
