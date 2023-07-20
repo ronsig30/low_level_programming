@@ -1,6 +1,7 @@
 #include "main.h"
 /*
- * _isupper - Prints uppercase
+ * _isupper - checks if the input character c is an upper
+ *
  * @c: uppercase
  * Return: 1 if upper, otherwise 0
  */
@@ -14,5 +15,4 @@ int _isupper(int c)
 	{
 		return (0);
 	}
-	_putchar('\n');
 }
